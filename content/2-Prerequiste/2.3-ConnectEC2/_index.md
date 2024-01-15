@@ -1,65 +1,64 @@
 ---
-title : "Connect EC2 "
-date : "`r Sys.Date()`"
-weight : 3
-chapter : false
-pre : " <b> 2.3 </b> "
+title: "Connecting to EC2"
+date: "`r Sys.Date()`"
+weight: 3
+chapter: false
+pre: "<b>2.3</b>"
 ---
 
-#### Connect EC2
+#### Connecting to EC2
 
-1. After proceeding to configure Security Group. We will connect EC2.
+1. **Starting the Connection Process**  
+   After configuring the Security Group, begin connecting to EC2.
+   - Navigate to the **EC2** interface and select **Instances**.
+   - Choose the **SID-performance-instance**.
+   - Click on **Connect**.
 
-   - In the **EC2** interface, select **Instances**
-   - Select **SID-performance-instance**
-   - Select **Connect**
+   ![CloudFormation Template](/images/2.3-connectec2/0001.png?featherlight=false&width=90pc)
 
-![CloudFormation Template](/images/2.3-connectec2/0001.png?featherlight=false&width=90pc)
+2. **Using the Connect to Instance Interface**  
+   - Choose **EC2 Instance Connection**.
+   - Click on **Connect**.
 
-2. In the **Connect to instance** interface
+   ![CloudFormation Template](/images/2.3-connectec2/0002.png?featherlight=false&width=90pc)
 
-    - Select **EC2 instance Connection**
-    - Select **Connect**
+3. **Successful EC2 Connection**  
+   The connection to EC2 is now established.
 
-![CloudFormation Template](/images/2.3-connectec2/0002.png?featherlight=false&width=90pc)
+   ![CloudFormation Template](/images/2.3-connectec2/0003.png?featherlight=false&width=90pc)
 
-3. **EC2** connection successful.
+4. **Creating an Access Key After EC2 Connection**  
+   Post successful EC2 connection, proceed to create an **Access Key** for AWS CLI configuration.
+   - Go to **IAM**.
 
-![CloudFormation Template](/images/2.3-connectec2/0003.png?featherlight=false&width=90pc)
+   ![CloudFormation Template](/images/2.3-connectec2/0004.png?featherlight=false&width=90pc)
 
-4. After a successful EC2 connection. We will create **Access Key** to configure **AWS CLI**
+5. **Navigating the IAM Interface**  
+   - Select **Users**.
+   - Choose **SID-lab-user1**.
 
-   - Access to **IAM**
+   ![CloudFormation Template](/images/2.3-connectec2/0005.png?featherlight=false&width=90pc)
 
-![CloudFormation Template](/images/2.3-connectec2/0004.png?featherlight=false&width=90pc)
+6. **In the User Interface**  
+   - Click on **Security credentials**.
+   - Select **Create access key**.
 
-5. In the **IAM** interface
+   ![CloudFormation Template](/images/2.3-connectec2/0006.png?featherlight=false&width=90pc)
 
-   - Select **Users**
-   - Select **SID-lab-user1**
+7. **Upon Successfully Creating an Access Key**  
+   - Choose to **Download .csv file**.
+   - Click **Close**.
 
-![CloudFormation Template](/images/2.3-connectec2/0005.png?featherlight=false&width=90pc)
+   ![CloudFormation Template](/images/2.3-connectec2/0007.png?featherlight=false&width=90pc)
 
-6. In the user interface
-
-   - Select **Security credentials**
-   - Select **Create access key**
-
-![CloudFormation Template](/images/2.3-connectec2/0006.png?featherlight=false&width=90pc)
-
-7. When creating **Access key** successfully
-
-   - Select **Download.csv file**
-   - Select **Close**
-
-![CloudFormation Template](/images/2.3-connectec2/0007.png?featherlight=false&width=90pc)
-
-8. Enter commands on the **SSH** interface
+8. **Entering Commands in the SSH Interface**  
+   Enter the following command:
 
 ```
 aws configure
 ```
 
-   - Proceed to configure from the information of the downloaded csv file.
+
+- Continue with the configuration using the information from the downloaded csv file.
 
 ![CloudFormation Template](/images/2.3-connectec2/0008.png?featherlight=false&width=90pc)

@@ -12,21 +12,21 @@
     <title>Storage Performance Lab :: STORAGE PERFORMANCE LAB</title>
 
     
-    <link href="/css/nucleus.css?1701083147" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701083147" rel="stylesheet">
-    <link href="/css/hybrid.css?1701083147" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701083147" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701083147" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701083147" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701083147" rel="stylesheet">
-    <link href="/css/theme.css?1701083147" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701083147" rel="stylesheet">
+    <link href="/css/nucleus.css?1705314366" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1705314366" rel="stylesheet">
+    <link href="/css/hybrid.css?1705314366" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1705314366" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1705314366" rel="stylesheet">
+    <link href="/css/auto-complete.css?1705314366" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1705314366" rel="stylesheet">
+    <link href="/css/theme.css?1705314366" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1705314366" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701083147" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1705314366" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701083147"></script>
+    <script src="/js/jquery-3.3.1.min.js?1705314366"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701083147"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701083147"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1705314366"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1705314366"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701083147"></script>
+<script type="text/javascript" src="/js/search.js?1705314366"></script>
 
     
   </div>
@@ -88,7 +88,7 @@
         
         ">
       <a href="/1-introduce/">
-           <b> 1. </b> Introduction
+          <b>1. </b>Introduction
           
             <i class="fas fa-check read-icon"></i>
           
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/" title="Preparation " class="dd-item 
+    <li data-nav-id="/2-prerequiste/" title="Preparation" class="dd-item 
         
         
         
         ">
       <a href="/2-prerequiste/">
-           <b> 2. </b> Preparation 
+          <b>2. </b>Preparation
           
             <i class="fas fa-check read-icon"></i>
           
@@ -145,7 +145,7 @@
         
         ">
       <a href="/2-prerequiste/2.1-launchcloudformation/">
-           <b> 2.1 </b> Launch CloudFormation Template
+          <b> 2.1 </b>Launch CloudFormation Template
           
             <i class="fas fa-check read-icon"></i>
           
@@ -195,13 +195,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.3-connectec2/" title="Connect EC2 " class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.3-connectec2/" title="Connecting to EC2" class="dd-item 
         
         
         
         ">
       <a href="/2-prerequiste/2.3-connectec2/">
-           <b> 2.3 </b> Connect EC2 
+          <b>2.3</b>Connecting to EC2
           
             <i class="fas fa-check read-icon"></i>
           
@@ -236,7 +236,7 @@
         
         ">
       <a href="/3-s3storageperformance/">
-           <b> 3. </b> S3 Storage Performance
+          <b>3.</b>S3 Storage Performance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -386,7 +386,7 @@
         
         ">
       <a href="/4-efsstorageperformance/">
-           <b> 4. </b> EFS Storage Performance
+          <b>4.</b>EFS Storage Performance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -536,7 +536,7 @@
         
         ">
       <a href="/5-cleanup/">
-           <b> 5. </b> Clean up resources
+          <b>5.</b>Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -639,7 +639,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>15-01-2024</font></i>
     </left>
     <left>
         <br>
@@ -677,68 +677,35 @@
 
  
 <h1 id="storage-performance-lab">Storage Performance Lab</h1>
-<p>In this lab, we&rsquo;ll go through pattern design best practices: optimizing performance <strong><strong>Amazon S3</strong></strong> and optimizing performance <strong>Amazon EFS</strong></p>
+<p>In this lab, we will explore best practices in pattern design, focusing on optimizing performance in <strong>Amazon S3</strong> and <strong>Amazon EFS</strong>.</p>
 <p><img src="/images/1-Intro/0001.png?featherlight=false&amp;width=40pc" alt="CloudFormation Template"></p>
 <h4 id="s3-storage-performance">S3 Storage Performance</h4>
-<p>Your applications can easily achieve thousands of transactions per second in request performance when uploading and retrieving storage from Amazon S3. Amazon S3 automatically scales to high request rates. For example, your application can achieve at least 3,500 PUT/COPY/POST/DELETE or 5,500 GET/HEAD requests per second per partitioned prefix. There are no limits to the number of prefixes in a bucket. You can increase your read or write performance by using parallelization. For example, if you create 10 prefixes in an Amazon S3 bucket to parallelize reads, you could scale your read performance to 55,000 read requests per second. Similarly, you can scale write operations by writing to multiple prefixes. For more information about creating and using prefixes, see Organizing objects using prefixes.</p>
-<p>Some data lake applications on Amazon S3 scan millions or billions of objects for queries that run over petabytes of data. These data lake applications achieve single-instance transfer rates that maximize the network interface use for their Amazon EC2 instance, which can be up to 100 Gb/s on a single instance. These applications then aggregate throughput across multiple instances to get multiple terabits per second.</p>
-<p>Other applications are sensitive to latency, such as social media messaging applications. These applications can achieve consistent small object latencies (and first-byte-out latencies for larger objects) of roughly 100–200 milliseconds.</p>
-<p>Other AWS services can also help accelerate performance for different application architectures. For example, if you want higher transfer rates over a single HTTP connection or single-digit millisecond latencies, use Amazon CloudFront or Amazon ElastiCache for caching with Amazon S3.</p>
-<p>Additionally, if you want fast data transport over long distances between a client and an S3 bucket, use Configuring fast, secure file transfers using Amazon S3 Transfer Acceleration. Transfer Acceleration uses the globally distributed edge locations in CloudFront to accelerate data transport over geographical distances. If your Amazon S3 workload uses server-side encryption with AWS Key Management Service (SSE-KMS), see AWS KMS Limits in the AWS Key Management Service Developer Guide for information about the request rates supported for your use case.</p>
-<p>The following topics describe best practice guidelines and design patterns for optimizing performance for applications that use Amazon S3. Refer to the Performance Guidelines for Amazon S3 and Performance Design Patterns for Amazon S3 for the most current information about performance optimization for Amazon S3.</p>
+<p>Amazon S3 allows applications to achieve thousands of transactions per second when uploading and retrieving storage. This service scales automatically to high request rates. For instance, applications can achieve at least 3,500 PUT/COPY/POST/DELETE or 5,500 GET/HEAD requests per second for each partitioned prefix. Parallelization can further increase read or write performance. For example, creating 10 prefixes in a bucket can scale read performance to 55,000 requests per second. Write operations can be scaled similarly. For more information on using prefixes, refer to &ldquo;Organizing objects using prefixes.&rdquo;</p>
+<p>Data lake applications on Amazon S3, scanning millions or billions of objects over petabytes of data, can achieve high single-instance transfer rates, using up to 100 Gb/s on a single Amazon EC2 instance. These rates can be aggregated across multiple instances for even greater throughput.</p>
+<p>Applications sensitive to latency, like social media messaging, can achieve small object latencies of approximately 100–200 milliseconds.</p>
+<p>Other AWS services, such as Amazon CloudFront or Amazon ElastiCache, can accelerate performance for different architectures. Amazon S3 Transfer Acceleration, leveraging CloudFront&rsquo;s edge locations, can significantly speed up data transport over long distances. For workloads using server-side encryption with AWS Key Management Service (SSE-KMS), refer to the AWS Key Management Service Developer Guide for supported request rates.</p>
+<p>For optimizing Amazon S3 performance, consult the Performance Guidelines for Amazon S3 and Performance Design Patterns for Amazon S3.</p>
 <h4 id="efs-storage-performance">EFS Storage Performance</h4>
-<p>Amazon EFS provides a serverless, set-and-forget elastic file system that you can access from any compute service within AWS and on-premises, including:</p>
+<p>Amazon EFS offers a serverless, elastic file system accessible from various AWS services and on-premises. It delivers over 10 gibibytes per second (GiBps) of throughput, 500,000 IOPS, and sub-millisecond or low single-digit millisecond latencies.</p>
+<h4 id="performance-summary">Performance Summary</h4>
+<p>File system performance in Amazon EFS is measured by latency, throughput, and IOPS. The performance depends on the file system&rsquo;s configuration, influenced by:</p>
 <ul>
-<li>
-<p>Amazon Elastic Compute Cloud (Amazon EC2)</p>
-</li>
-<li>
-<p>Amazon Elastic Container Service (Amazon ECS)</p>
-</li>
-<li>
-<p>Amazon Elastic Kubernetes Service (Amazon EKS)</p>
-</li>
-<li>
-<p>AWS Fargate</p>
-</li>
-<li>
-<p>AWS Lambda</p>
-</li>
+<li>Storage class (EFS One Zone or EFS Standard)</li>
+<li>Performance mode (General Purpose or Max I/O)</li>
+<li>Throughput mode (Bursting or Provisioned)</li>
 </ul>
-<p>Amazon EFS delivers more than 10 gibibytes per second (GiBps) of throughput over 500,000 IOPS, and sub-millisecond or low single digit millisecond latencies.</p>
-<h4 id="performance-summary">Performance summary</h4>
-<p>File system performance is typically measured using the dimensions of latency, throughput, and I/O operations per second (IOPS). Amazon EFS performance across these dimensions depends on your file system&rsquo;s configuration. The following configurations impact the performance of an Amazon EFS file system:</p>
+<h4 id="storage-classes-and-performance">Storage Classes and Performance</h4>
+<p>Amazon EFS uses two storage class types:</p>
 <ul>
-<li>
-<p>Storage class – EFS One Zone or EFS Standard</p>
-</li>
-<li>
-<p>Performance mode – General Purpose or Max I/O</p>
-</li>
-<li>
-<p>Throughput mode – Bursting or Provisioned</p>
-</li>
+<li>EFS One Zone storage classes (EFS One Zone and EFS One Zone-IA) replicate data within a single Availability Zone.</li>
+<li>EFS Standard storage classes (EFS Standard and EFS Standard-IA) replicate data across multiple Availability Zones.</li>
 </ul>
-<h4 id="storage-classes-and-performance">Storage classes and performance</h4>
-<p>Amazon EFS uses two types of storage classes:</p>
+<p>Latency for the IA classes is higher compared to the Standard or One Zone classes.</p>
+<h4 id="performance-modes">Performance Modes</h4>
+<p>Amazon EFS offers two performance modes:</p>
 <ul>
-<li>
-<p>EFS One Zone storage classes – EFS One Zone and EFS One Zone-Infrequent Access (EFS One Zone-IA). The EFS One Zone storage classes replicate data within a single Availability Zone.</p>
-</li>
-<li>
-<p>EFS Standard storage classes – EFS Standard and EFS Standard-IA. The EFS Standard storage classes replicate data across multiple Availability Zones (Multi-AZ).</p>
-</li>
-</ul>
-<p>First-byte latency when reading from or writing to either of the IA storage classes is higher than that for the EFS Standard or EFS One Zone storage classes.</p>
-<h4 id="performance-modes">Performance modes</h4>
-<p>Amazon EFS offers two performance modes, General Purpose and Max I/O:</p>
-<ul>
-<li>
-<p>General Purpose mode supports up to 35,000 IOPS and has the lowest per-operation latency. File systems with EFS One Zone storage classes always use General Purpose performance mode. For file systems with EFS Standard storage classes, you can use either the default General Purpose performance mode or the Max I/O performance mode.</p>
-</li>
-<li>
-<p>Max I/O mode supports 500,000+ IOPS and has higher per-operation latencies when compared to General Purpose mode.</p>
-</li>
+<li>General Purpose mode, supporting up to 35,000 IOPS with the lowest latency.</li>
+<li>Max I/O mode, supporting over 500,000 IOPS with higher latency compared to General Purpose mode.</li>
 </ul>
 <h4 id="content">Content</h4>
 <ol>
@@ -1061,19 +1028,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701083147"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701083147"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701083147"></script>
-    <script src="/js/jquery.sticky.js?1701083147"></script>
-    <script src="/js/featherlight.min.js?1701083147"></script>
-    <script src="/js/highlight.pack.js?1701083147"></script>
+    <script src="/js/clipboard.min.js?1705314366"></script>
+    <script src="/js/perfect-scrollbar.min.js?1705314366"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1705314366"></script>
+    <script src="/js/jquery.sticky.js?1705314366"></script>
+    <script src="/js/featherlight.min.js?1705314366"></script>
+    <script src="/js/highlight.pack.js?1705314366"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701083147"></script>
-    <script src="/js/learn.js?1701083147"></script>
-    <script src="/js/hugo-learn.js?1701083147"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1705314366"></script>
+    <script src="/js/learn.js?1705314366"></script>
+    <script src="/js/hugo-learn.js?1705314366"></script>
 
-    <link href="/mermaid/mermaid.css?1701083147" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701083147"></script>
+    <link href="/mermaid/mermaid.css?1705314366" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1705314366"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

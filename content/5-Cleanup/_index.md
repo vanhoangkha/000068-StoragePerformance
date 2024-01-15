@@ -1,33 +1,33 @@
 ---
-title : "Clean up resources"
-date : "`r Sys.Date()`"
-weight : 5
-chapter : false
-pre : " <b> 5. </b> "
+title: "Clean up resources"
+date: "`r Sys.Date()`"
+weight: 5
+chapter: false
+pre: "<b>5.</b>"
 ---
 
 #### Clean up resources
 
-#### Delete bucket S3
+#### Delete S3 Bucket
 
-1. Access the [S3](https://console.aws.amazon.com/s3/)
-2. Select **Bucket** to delete.
-3. Select **Delete** (must **Empty** bucket before deleting)
-4. In the **Delete bucket** page, confirm the deletion of the bucket
-5. Select **Delete bucket**.
+1. Access the [S3 Console](https://console.aws.amazon.com/s3/).
+2. Select the **Bucket** you wish to delete.
+3. Click on **Delete** (ensure the bucket is **Empty** before attempting to delete).
+4. On the **Delete bucket** page, confirm the deletion.
+5. Click **Delete bucket**.
 
 #### Clear CloudFormation Stack
 
-1. Access the interface [CloudFormation](https://console.aws.amazon.com/cloudformation)
-2. Select **Stack** related to the lab.
-3. Select **Delete**
-4. Confirm delete stack with **Delete stack**
+1. Go to the [CloudFormation Console](https://console.aws.amazon.com/cloudformation).
+2. Select the **Stack** related to the lab.
+3. Click **Delete**.
+4. Confirm stack deletion by clicking **Delete stack**.
 
-#### Terminate EC2
+#### Terminate EC2 Instances
 
-1. Access the interface [EC2](https://console.aws.amazon.com/ec2/)
-2. Select **Instances**
-3. Select **Instance state**, then select **Terminate instance**
-4. Validate **Terminate**
+1. Visit the [EC2 Console](https://console.aws.amazon.com/ec2/).
+2. Select **Instances**.
+3. Choose **Instance state**, then select **Terminate instance**.
+4. Confirm termination by clicking **Terminate**.
 
-Check out other resources related to the lab.
+Remember to check out other resources related to the lab.

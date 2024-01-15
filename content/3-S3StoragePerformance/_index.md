@@ -1,9 +1,9 @@
 ---
-title : "S3 Storage Performance"
-date : "`r Sys.Date()`"
-weight : 3
-chapter : false
-pre : " <b> 3. </b> "
+title: "S3 Storage Performance"
+date: "`r Sys.Date()`"
+weight: 3
+chapter: false
+pre: "<b>3.</b>"
 ---
 
 #### S3 Storage Performance

@@ -12,21 +12,21 @@
     <title>Clean up resources :: STORAGE PERFORMANCE LAB</title>
 
     
-    <link href="/css/nucleus.css?1701083147" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701083147" rel="stylesheet">
-    <link href="/css/hybrid.css?1701083147" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701083147" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701083147" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701083147" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701083147" rel="stylesheet">
-    <link href="/css/theme.css?1701083147" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701083147" rel="stylesheet">
+    <link href="/css/nucleus.css?1705314366" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1705314366" rel="stylesheet">
+    <link href="/css/hybrid.css?1705314366" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1705314366" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1705314366" rel="stylesheet">
+    <link href="/css/auto-complete.css?1705314366" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1705314366" rel="stylesheet">
+    <link href="/css/theme.css?1705314366" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1705314366" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701083147" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1705314366" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701083147"></script>
+    <script src="/js/jquery-3.3.1.min.js?1705314366"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701083147"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701083147"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1705314366"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1705314366"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701083147"></script>
+<script type="text/javascript" src="/js/search.js?1705314366"></script>
 
     
   </div>
@@ -88,7 +88,7 @@
         
         ">
       <a href="/1-introduce/">
-           <b> 1. </b> Introduction
+          <b>1. </b>Introduction
           
             <i class="fas fa-check read-icon"></i>
           
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/" title="Preparation " class="dd-item 
+    <li data-nav-id="/2-prerequiste/" title="Preparation" class="dd-item 
         
         
         
         ">
       <a href="/2-prerequiste/">
-           <b> 2. </b> Preparation 
+          <b>2. </b>Preparation
           
             <i class="fas fa-check read-icon"></i>
           
@@ -145,7 +145,7 @@
         
         ">
       <a href="/2-prerequiste/2.1-launchcloudformation/">
-           <b> 2.1 </b> Launch CloudFormation Template
+          <b> 2.1 </b>Launch CloudFormation Template
           
             <i class="fas fa-check read-icon"></i>
           
@@ -195,13 +195,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.3-connectec2/" title="Connect EC2 " class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.3-connectec2/" title="Connecting to EC2" class="dd-item 
         
         
         
         ">
       <a href="/2-prerequiste/2.3-connectec2/">
-           <b> 2.3 </b> Connect EC2 
+          <b>2.3</b>Connecting to EC2
           
             <i class="fas fa-check read-icon"></i>
           
@@ -236,7 +236,7 @@
         
         ">
       <a href="/3-s3storageperformance/">
-           <b> 3. </b> S3 Storage Performance
+          <b>3.</b>S3 Storage Performance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -386,7 +386,7 @@
         
         ">
       <a href="/4-efsstorageperformance/">
-           <b> 4. </b> EFS Storage Performance
+          <b>4.</b>EFS Storage Performance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -536,7 +536,7 @@
         
         ">
       <a href="/5-cleanup/">
-           <b> 5. </b> Clean up resources
+          <b>5.</b>Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -639,7 +639,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>15-01-2024</font></i>
     </left>
     <left>
         <br>
@@ -729,29 +729,29 @@
 
 
 	<h4 id="clean-up-resources">Clean up resources</h4>
-<h4 id="delete-bucket-s3">Delete bucket S3</h4>
+<h4 id="delete-s3-bucket">Delete S3 Bucket</h4>
 <ol>
-<li>Access the <a href="https://console.aws.amazon.com/s3/">S3</a></li>
-<li>Select <strong>Bucket</strong> to delete.</li>
-<li>Select <strong>Delete</strong> (must <strong>Empty</strong> bucket before deleting)</li>
-<li>In the <strong>Delete bucket</strong> page, confirm the deletion of the bucket</li>
-<li>Select <strong>Delete bucket</strong>.</li>
+<li>Access the <a href="https://console.aws.amazon.com/s3/">S3 Console</a>.</li>
+<li>Select the <strong>Bucket</strong> you wish to delete.</li>
+<li>Click on <strong>Delete</strong> (ensure the bucket is <strong>Empty</strong> before attempting to delete).</li>
+<li>On the <strong>Delete bucket</strong> page, confirm the deletion.</li>
+<li>Click <strong>Delete bucket</strong>.</li>
 </ol>
 <h4 id="clear-cloudformation-stack">Clear CloudFormation Stack</h4>
 <ol>
-<li>Access the interface <a href="https://console.aws.amazon.com/cloudformation">CloudFormation</a></li>
-<li>Select <strong>Stack</strong> related to the lab.</li>
-<li>Select <strong>Delete</strong></li>
-<li>Confirm delete stack with <strong>Delete stack</strong></li>
+<li>Go to the <a href="https://console.aws.amazon.com/cloudformation">CloudFormation Console</a>.</li>
+<li>Select the <strong>Stack</strong> related to the lab.</li>
+<li>Click <strong>Delete</strong>.</li>
+<li>Confirm stack deletion by clicking <strong>Delete stack</strong>.</li>
 </ol>
-<h4 id="terminate-ec2">Terminate EC2</h4>
+<h4 id="terminate-ec2-instances">Terminate EC2 Instances</h4>
 <ol>
-<li>Access the interface <a href="https://console.aws.amazon.com/ec2/">EC2</a></li>
-<li>Select <strong>Instances</strong></li>
-<li>Select <strong>Instance state</strong>, then select <strong>Terminate instance</strong></li>
-<li>Validate <strong>Terminate</strong></li>
+<li>Visit the <a href="https://console.aws.amazon.com/ec2/">EC2 Console</a>.</li>
+<li>Select <strong>Instances</strong>.</li>
+<li>Choose <strong>Instance state</strong>, then select <strong>Terminate instance</strong>.</li>
+<li>Confirm termination by clicking <strong>Terminate</strong>.</li>
 </ol>
-<p>Check out other resources related to the lab.</p>
+<p>Remember to check out other resources related to the lab.</p>
 
 
 
@@ -1075,19 +1075,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701083147"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701083147"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701083147"></script>
-    <script src="/js/jquery.sticky.js?1701083147"></script>
-    <script src="/js/featherlight.min.js?1701083147"></script>
-    <script src="/js/highlight.pack.js?1701083147"></script>
+    <script src="/js/clipboard.min.js?1705314366"></script>
+    <script src="/js/perfect-scrollbar.min.js?1705314366"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1705314366"></script>
+    <script src="/js/jquery.sticky.js?1705314366"></script>
+    <script src="/js/featherlight.min.js?1705314366"></script>
+    <script src="/js/highlight.pack.js?1705314366"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701083147"></script>
-    <script src="/js/learn.js?1701083147"></script>
-    <script src="/js/hugo-learn.js?1701083147"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1705314366"></script>
+    <script src="/js/learn.js?1705314366"></script>
+    <script src="/js/hugo-learn.js?1705314366"></script>
 
-    <link href="/mermaid/mermaid.css?1701083147" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701083147"></script>
+    <link href="/mermaid/mermaid.css?1705314366" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1705314366"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
